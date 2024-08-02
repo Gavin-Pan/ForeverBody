@@ -20,9 +20,11 @@ const FoodwithImage = () => {
   async function aiImageRun() {
     setLoading(true);
     setResponse("");
-    const model = genAI.getGenerativeModel({ model: "gemini-pro-vision" });
+    const model = genAI.getGenerativeModel({
+      model: "gemini-1.5-pro-exp-0801",
+    });
     const result = await model.generateContent([
-      "Tell me the estimated number of calories, protein, and sugar in the image?. Give answer in following format 'Calories: x , Protein: y , Sugar: z'",
+      "Tell me the estimated number of calories, protein, and sugar in the image?. Give answer in following format 'Calories: x , Protein: y , Sugar: z'. ONLY DISPLAY THIS FORMATTED DATA. If you idenitify food, just give a rough estimate even if the food nutrition recognition varies from food to food. If you can't recognise the image as any food, then simply say 'Can't recognise'.",
       imageInineData,
     ]);
     const response = await result.response;
