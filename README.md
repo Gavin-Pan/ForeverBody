@@ -1,7 +1,7 @@
 # ForeverBody - Nutrition Tracker Website
 
 A personal nutrition tracking app that demonstrates the power of Gemini AI, ands thus helps in estimating and calculating food intake and goals. 
-
+Website: https://main--forever-body.netlify.app/
 
 Technologies that were used:
 - React.js
